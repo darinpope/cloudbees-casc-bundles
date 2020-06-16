@@ -1,0 +1,158 @@
+advisor:
+  acceptToS: true
+  email: "dpope@cloudbees.com"
+  excludedComponents:
+  - "GCLogs"
+  - "Agents"
+  - "AgentsConfigFile"
+  - "ConfigFileComponent"
+  - "RootCAs"
+  - "SlaveLogs"
+  - "OtherConfigFilesComponent"
+  - "HeapUsageHistogram"
+  nagDisabled: true
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+notificationConfiguration:
+  enabled: true
+  router: "operationsCenter"
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelAtoms:
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 0
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: 50000
+  updateCenter:
+    sites:
+    - id: "cap-core-mm"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-mm/update-center.json"
+    - id: "core-mm-offline"
+      url: "file:/tmp/jenkins/war/WEB-INF/plugins/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  artifactManager:
+    artifactManagerFactories:
+    - "jSync"
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+    - "averageChildHealthMetric"
+    - jobStatusHealthMetric:
+        countVirginJobs: false
+        failure: true
+        success: true
+        unbuilt: true
+        unstable: true
+    - "projectEnabledHealthMetric"
+  experimentalPlugins:
+    enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:\r\n\r\nCheck\
+      \ console output at $BUILD_URL to view the results."
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://a2e0dcfd5c24d4397b19392817c3a4ad-1956168988.us-east-1.elb.amazonaws.com/mm1/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: PERFORMANCE_OPTIMIZED
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "shared-library"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              id: "65574fd3-5087-4548-9204-3ebb5213d595"
+              remote: "https://github.com/darinpope/github-api-global-lib.git"
+              traits:
+              - "gitBranchDiscovery"
+  location:
+    adminAddress: "Jenkins Admin <dpope@cloudbees.com>"
+    url: "http://a2e0dcfd5c24d4397b19392817c3a4ad-1956168988.us-east-1.elb.amazonaws.com/mm1/"
+  mailer:
+    charset: "UTF-8"
+    smtpHost: "smtp.gmail.com"
+    useSsl: false
+  operationsCenterRootAction:
+    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAB3KSQ7CMAxA0bt4jZO2RCHtbWzHTEoJysAGcXcCy/f133Ap9GiwwerI0ckHDCQz\r\
+      \nusAeeV0WPPJEZ8+kEj0c4BbHO+G+zwO9pKFra8/NWrlnMZJyj6xaUXJRU1+/1GvTYlIWSv/LwucL\r\
+      \nnqkcyngAAAA=\r\n----- END CONNECTION DETAILS -----\n"
+  pipeline-model-docker:
+    dockerLabel: "docker"
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
