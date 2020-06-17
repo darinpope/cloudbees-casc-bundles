@@ -135,10 +135,6 @@ unclassified:
     charset: "UTF-8"
     smtpHost: "smtp.gmail.com"
     useSsl: false
-  operationsCenterRootAction:
-    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAB3KSQ7CMAxA0bt4jZO2RCHtbWzHTEoJysAGcXcCy/f133Ap9GiwwerI0ckHDCQz\r\
-      \nusAeeV0WPPJEZ8+kEj0c4BbHO+G+zwO9pKFra8/NWrlnMZJyj6xaUXJRU1+/1GvTYlIWSv/LwucL\r\
-      \nnqkcyngAAAA=\r\n----- END CONNECTION DETAILS -----\n"
   pipeline-model-docker:
     dockerLabel: "docker"
   pollSCM:
