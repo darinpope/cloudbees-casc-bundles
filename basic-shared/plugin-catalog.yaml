@@ -1,7 +1,7 @@
 type: plugin-catalog
 version: '1'
-name: 0-basic-shared
-displayName: 0-basic-shared
+name: 0-casc-basic-shared
+displayName: 0-casc-basic-shared
 configurations:
 - description: Exported plugins
   includePlugins:
