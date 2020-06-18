@@ -19,9 +19,6 @@ beekeeper:
   upgrades:
     autoDowngradePlugins: false
     autoUpgradePlugins: false
-notificationConfiguration:
-  enabled: true
-  router: "operationsCenter"
 jenkins:
   agentProtocols:
   - "Diagnostic-Ping"
