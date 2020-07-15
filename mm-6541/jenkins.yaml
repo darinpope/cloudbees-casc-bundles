@@ -114,7 +114,7 @@ unclassified:
     showEntireCommitSummaryInChanges: false
     useExistingAccountWithSameEmail: false
   location:
-    adminAddress: "Darin Pope <dpope@cloudbees.com>"
+    adminAddress: "Darin Pope <dpope+imoutofhere@cloudbees.com>"
   mailer:
     charset: "UTF-8"
     smtpHost: "smtp.gmail.com"
