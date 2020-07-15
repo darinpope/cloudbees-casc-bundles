@@ -39,6 +39,7 @@ plugins:
   - {id: jaxb}
   - {id: cloudbees-administrative-monitors}
   - {id: matrix-project}
+  - {id: timestamper}
   - {id: scm-api}
   - {id: aws-credentials}
   - {id: pipeline-milestone-step}
@@ -112,4 +113,4 @@ plugins:
   - {id: ace-editor}
   - {id: cloudbees-template}
   - {id: cloudbees-nodes-plus}
-  - {id: metrics}
+  - {id: metrics}  
