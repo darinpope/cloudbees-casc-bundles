@@ -1,0 +1,9 @@
+type: plugin-catalog
+version: '1'
+name: 0-cm8834
+displayName: Catalog for 0-cm8834
+configurations:
+- description: Exported plugins
+  includePlugins:
+    basic-branch-build-strategies: {version: 1.3.2}
+    pipeline-utility-steps: {version: 2.6.1}
