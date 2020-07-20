@@ -130,8 +130,8 @@ unclassified:
   operationsCenterRootAction:
     connectionDetails: |-
       ----- BEGIN CONNECTION DETAILS -----
-      H4sIAAAAAAAAAA3KSQrAIAxA0btk3SB1qOJtjNG20Amxq+Ldm7978D9YW7o6RLDVGtaVMRTPaDV5
-      pFQNBipEyZPLi4MJdpZ3xnxqwdsO0db7E5W6cwySgvEDFa+jKVUAAAA=
+      H4sIAAAAAAAAABXKSQ6AIAxA0bt0bUMZAoXbYCVq4hSCK+Pdxb97yX9grvlokEBnFx1nj75IQMdk
+      MQaTUZOMTDSSLQQDrNP/ouym465b19LalZQ6JXFPwfsBEmS9y1UAAAA=
       ----- END CONNECTION DETAILS -----
   pollSCM:
     pollingThreadCount: 10
