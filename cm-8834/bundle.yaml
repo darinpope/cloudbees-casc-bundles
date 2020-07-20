@@ -1,7 +1,7 @@
 apiVersion: "1"
 id: "0-cm8834"
 description: "Bundle for cm8834"
-version: "1"
+version: "2"
 plugins:
   - "plugins.yaml"
 jcasc:
