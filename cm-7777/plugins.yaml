@@ -2,15 +2,37 @@ plugins:
   - {id: ace-editor}
   - {id: apache-httpcomponents-client-4-api}
   - {id: async-http-client}
+  - {id: authentication-tokens}
   - {id: aws-credentials}
   - {id: aws-java-sdk}
   - {id: basic-branch-build-strategies}
+  - {id: blueocean-autofavorite}
+  - {id: blueocean-bitbucket-pipeline}
   - {id: blueocean-commons}
+  - {id: blueocean-config}
+  - {id: blueocean-core-js}
+  - {id: blueocean-dashboard}
+  - {id: blueocean-display-url}
+  - {id: blueocean-events}
+  - {id: blueocean-git-pipeline}
+  - {id: blueocean-github-pipeline}
+  - {id: blueocean-i18n}
+  - {id: blueocean-jira}
+  - {id: blueocean-jwt}
+  - {id: blueocean-personalization}
+  - {id: blueocean-pipeline-api-impl}
+  - {id: blueocean-pipeline-editor}
+  - {id: blueocean-pipeline-scm-api}
+  - {id: blueocean-rest-impl}
+  - {id: blueocean-rest}
+  - {id: blueocean-web}
+  - {id: blueocean}
   - {id: bouncycastle-api}
   - {id: branch-api}
   - {id: cloudbees-administrative-monitors}
   - {id: cloudbees-analytics}
   - {id: cloudbees-assurance}
+  - {id: cloudbees-bitbucket-branch-source}
   - {id: cloudbees-blueocean-default-theme}
   - {id: cloudbees-folders-plus}
   - {id: cloudbees-folder}
@@ -36,8 +58,11 @@ plugins:
   - {id: credentials-binding}
   - {id: credentials}
   - {id: display-url-api}
+  - {id: docker-commons}
+  - {id: docker-workflow}
   - {id: durable-task}
   - {id: email-ext}
+  - {id: favorite}
   - {id: git-client}
   - {id: git-server}
   - {id: github-api}
@@ -46,10 +71,14 @@ plugins:
   - {id: git}
   - {id: gradle}
   - {id: handlebars}
+  - {id: handy-uri-templates-2-api}
+  - {id: htmlpublisher}
   - {id: infradna-backup}
   - {id: jackson2-api}
   - {id: jaxb}
   - {id: jdk-tool}
+  - {id: jenkins-design-language}
+  - {id: jira}
   - {id: jquery-detached}
   - {id: jsch}
   - {id: junit}
@@ -57,6 +86,7 @@ plugins:
   - {id: mailer}
   - {id: mapdb-api}
   - {id: matrix-project}
+  - {id: mercurial}
   - {id: metrics}
   - {id: momentjs}
   - {id: nectar-license}
@@ -83,9 +113,11 @@ plugins:
   - {id: pipeline-stage-view}
   - {id: pipeline-utility-steps}
   - {id: plain-credentials}
+  - {id: pubsub-light}
   - {id: scm-api}
   - {id: script-security}
   - {id: snakeyaml-api}
+  - {id: sse-gateway}
   - {id: ssh-credentials}
   - {id: structs}
   - {id: support-core}
