@@ -1,0 +1,144 @@
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "com.cloudbees.jenkins.support.impl.cloudbees.TcpSlaveAgentListenerMonitor"
+  labelAtoms:
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "core-cm-offline"
+      url: "file:/var/cache/cloudbees-core-cm/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-core-cm"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-cm/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+notificationConfiguration:
+  enabled: false
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  artifactManager:
+    artifactManagerFactories:
+    - "jSync"
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+    - "averageChildHealthMetric"
+    - jobStatusHealthMetric:
+        countVirginJobs: false
+        failure: true
+        success: true
+        unbuilt: true
+        unstable: true
+    - "projectEnabledHealthMetric"
+  experimentalPlugins:
+    enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:\r\n\r\nCheck\
+      \ console output at $BUILD_URL to view the results."
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    smtpServer: "smtp.gmail.com"
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://cm7777:8080/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalDefaultFlowDurabilityLevel:
+    durabilityHint: PERFORMANCE_OPTIMIZED
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "shared-starter"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              remote: "https://github.com/darinpope/github-api-global-lib.git"
+              traits:
+              - "gitBranchDiscovery"
+  hAGlobalConfiguration:
+    bindPort: 0
+    diagnosticPort: 0
+    portRange: 0
+  location:
+    adminAddress: "Darin Pope <dpope+nospam@cloudbees.com>"
+    url: "http://cm7777:8080/"
+  mailer:
+    charset: "UTF-8"
+    smtpHost: "smtp.gmail.com"
+    useSsl: false
+    useTls: false
+  operationsCenterRootAction:
+    connectionDetails: |-
+      ----- BEGIN CONNECTION DETAILS -----
+      H4sIAAAAAAAAAA2KSQ6AIAwA/9KzDRQQK78REDVxC8GT8e92bjOZF5Y6nQ0CFEM2WedQ82zQ9aPD
+      6EkjZcvFR0rMGjrYsryE6RgE8afuEtbW7qDUlQILCr4fuu56q1gAAAA=
+      ----- END CONNECTION DETAILS -----
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"

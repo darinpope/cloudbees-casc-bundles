@@ -1,0 +1,10 @@
+apiVersion: "1"
+id: "0-cm7777"
+description: "Bundle descriptor for cm7777"
+version: "1"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
