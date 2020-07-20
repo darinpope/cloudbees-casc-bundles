@@ -90,6 +90,8 @@ unclassified:
     watchingEnabled: false
   gitHubConfiguration:
     apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://cm2:8080/github-webhook/"
   gitSCM:
     createAccountBasedOnEmail: false
     showEntireCommitSummaryInChanges: false
@@ -113,6 +115,7 @@ unclassified:
     portRange: 0
   location:
     adminAddress: "Darin Pope <dpope+nospam@cloudbees.com>"
+    url: "http://cm2:8080/"
   mailer:
     charset: "UTF-8"
     smtpHost: "smtp.gmail.com"
