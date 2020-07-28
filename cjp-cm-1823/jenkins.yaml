@@ -4,18 +4,19 @@ jenkins:
   - "JNLP4-connect"
   - "OperationsCenter2"
   - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
   crumbIssuer:
     standard:
       excludeClientIPFromCrumb: false
   disableRememberMe: false
-  disabledAdministrativeMonitors:
-  - "jenkins.diagnostics.SecurityIsOffMonitor"
   labelAtoms:
   - name: "master"
   markupFormatter: "plainText"
   mode: NORMAL
   myViewsTabBar: "standard"
-  numExecutors: 2
+  numExecutors: 0
   primaryView:
     all:
       name: "all"
@@ -24,13 +25,14 @@ jenkins:
   remotingSecurity:
     enabled: true
   scmCheckoutRetryCount: 0
-  slaveAgentPort: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: -1
   updateCenter:
     sites:
-      - id: "cje-offline"
-        url: "file:/var/cache/jenkins/war/WEB-INF/plugins/update-center.json"
-      - id: "cap-cje"
-        url: "https://jenkins-updates.cloudbees.com/update-center/envelope-cje/update-center.json"
+    - id: "cje-offline"
+      url: "file:/var/cache/jenkins/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-cje"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-cje/update-center.json"
   views:
   - all:
       name: "all"
@@ -53,6 +55,9 @@ security:
   sSHD:
     port: -1
 unclassified:
+  artifactManager:
+    artifactManagerFactories:
+    - "jSync"
   buildDiscarders:
     configuredBuildDiscarders:
     - "jobBuildDiscarder"
@@ -70,6 +75,33 @@ unclassified:
     - "projectEnabledHealthMetric"
   experimentalPlugins:
     enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://cm2:8080/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  hAGlobalConfiguration:
+    bindPort: 0
+    diagnosticPort: 0
+    portRange: 0
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
     url: "http://cm2:8080/"
@@ -80,10 +112,15 @@ unclassified:
   operationsCenterRootAction:
     connectionDetails: |-
       ----- BEGIN CONNECTION DETAILS -----
-        H4sIAAAAAAAAAA3KSw6AIAwA0bt0bUOoYITb0AJq4i8EV8a729m9ZF5YWjo7RHCemSUzUqEJndSE
-        iTxhcVTHwEGELQywZX0tykGKp+2qtfc7GnNJnDUD3w+r5MATVQAAAA==
+      H4sIAAAAAAAAAA3KSw6AIAwA0bt0bUOoYITb0AJq4i8EV8a729m9ZF5YWjo7RHCemSUzUqEJndSE
+      iTxhcVTHwEGELQywZX0tykGKp+2qtfc7GnNJnDUD3w+r5MATVQAAAA==
       ----- END CONNECTION DETAILS -----
   pollSCM:
     pollingThreadCount: 10
   usageStatisticsCloudBees:
     usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
