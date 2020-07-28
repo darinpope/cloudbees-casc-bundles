@@ -1,0 +1,10 @@
+id: "0-somebodys-bundle"
+version: "1"
+apiVersion: "1"
+description: "Bundle for cjp-cm-1823"
+plugins:
+  - "plugins.yaml"
+jcasc:
+  - "jenkins.yaml"
+catalog:
+  - "plugin-catalog.yaml"
