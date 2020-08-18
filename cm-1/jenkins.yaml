@@ -1,5 +1,10 @@
 jobs:
   - script: >
+      folder('folder1') {
+        displayName('Folder 1')
+        description('Folder for project A')
+      }
+  - script: >
       pipelineJob('folder1/casc-pipeline-basic') {
         displayName('CasC Pipeline Basic in Folder 1')
         definition {
