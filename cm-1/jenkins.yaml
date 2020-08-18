@@ -11,6 +11,39 @@ jobs:
         }
       }
   - script: >
+      multibranchPipelineJob('casc-mb-micro1-with-markerfile') {
+        displayName('CasC Multibranch for micro1 with marker file')
+        branchSources {
+          git {
+            id('6870572d-9f3d-4e90-8867-f51d90fe3dc9')
+            remote('https://github.com/darinpope/micro1.git')
+            includes('*')
+          }
+        }
+        factory {
+          customBranchProjectFactory {
+            marker('build.gradle')
+            definition {
+              cpsScmFlowDefinition {
+                scm {
+                  gitSCM {
+                    branch('*/master')
+                    remote {
+                      url('https://github.com/darinpope/jenkinsfile-library.git')
+                    }
+                    extensions {
+                      wipeWorkspace()
+                    }
+                  }
+                }
+                lightweight(true)
+                scriptPath('Jenkinsfile-gradle-linux')
+              }    
+            }
+          }
+        }
+      }
+  - script: >
       folder('folder1') {
         displayName('Folder 1')
         description('Folder for project A')
