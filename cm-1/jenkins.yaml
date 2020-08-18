@@ -157,6 +157,31 @@ unclassified:
     bindPort: 0
     diagnosticPort: 0
     portRange: 0
+  jobs:
+    - script: >
+        pipelineJob('casc-pipeline-basic') {
+          definition {
+            cpsScm {
+              scm {
+                  git('https://github.com/darinpope/jenkinsfile-library.git')
+              }
+              lightweight(true)
+              scriptPath('Jenkinsfile-basic')
+            }
+          }
+        }      
+    - script: >
+        pipelineJob('casc-pipeline-basic-shared-library') {
+          definition {
+            cpsScm {
+              scm {
+                  git('https://github.com/darinpope/jenkinsfile-library.git')
+              }
+              lightweight(true)
+              scriptPath('Jenkinsfile-basic-shared-library')
+            }
+          }
+        }      
   location:
     adminAddress: "address not configured yet <nobody@nowhere>"
     url: "http://cm1:8080/"
