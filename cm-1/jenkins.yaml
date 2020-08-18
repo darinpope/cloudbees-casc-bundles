@@ -1,0 +1,185 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "vagrant"
+          id: "vagrant"
+          password: "{AQAAABAAAAAQnQ35IOuR6iehrj3PU4Q7ifCzGjGH7VyU6zHFQ160BII=}"
+          scope: GLOBAL
+          username: "vagrant"
+      - basicSSHUserPrivateKey:
+          description: "vagrant-ssh-key"
+          id: "vagrant-ssh-key"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "vagrant"
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "com.cloudbees.jenkins.support.impl.cloudbees.TcpSlaveAgentListenerMonitor"
+  labelAtoms:
+  - name: "linux"
+  - name: "master"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      labelString: "linux"
+      launcher:
+        nioSsh:
+          connectionDetails:
+            credentialsId: "vagrant"
+            displayEnvironment: false
+            keyVerificationStrategy: "blindlyTrust"
+            port: 22
+          host: "agent"
+      mode: EXCLUSIVE
+      name: "linux"
+      remoteFS: "/home/vagrant/jenkins-agent"
+      retentionStrategy: "always"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "core-cm-offline"
+      url: "file:/var/cache/cloudbees-core-cm/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-core-cm"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-cm/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+notificationConfiguration:
+  enabled: false
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: true
+  sSHD:
+    port: -1
+unclassified:
+  artifactManager:
+    artifactManagerFactories:
+    - "jSync"
+  audit-trail:
+    logBuildCause: true
+    pattern: ".*/(?:configSubmit|doDelete|postBuildResult|enable|disable|cancelQueue|stop|toggleLogKeep|doWipeOutWorkspace|createItem|createView|toggleOffline|cancelQuietDown|quietDown|restart|exit|safeExit)"
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+    - "averageChildHealthMetric"
+    - jobStatusHealthMetric:
+        countVirginJobs: false
+        failure: true
+        success: true
+        unbuilt: true
+        unstable: true
+    - "projectEnabledHealthMetric"
+  experimentalPlugins:
+    enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:\r\n\r\nCheck\
+      \ console output at $BUILD_URL to view the results."
+    defaultContentType: "text/plain"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://cm1:8080/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalLibraries:
+    libraries:
+    - defaultVersion: "master"
+      name: "shared-library"
+      retriever:
+        modernSCM:
+          scm:
+            git:
+              credentialsId: "vagrant-ssh-key"
+              id: "a2ee6c4e-fa81-4468-999a-6a1bb9e899df"
+              remote: "ssh://vagrant@cm2/home/vagrant/git-repos/shared-library.git/"
+              traits:
+              - "gitBranchDiscovery"
+  hAGlobalConfiguration:
+    bindPort: 0
+    diagnosticPort: 0
+    portRange: 0
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://cm1:8080/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  operationsCenterRootAction:
+    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAA3KSwqAMAwA0btkbWg1gaa9TZpSFfwhdSXe3c7uwbww33o0SFCNfCRirDkUZK+K\r\
+      \nwoVRSWwqMUimDAOspb8ebR87nnvrWlq7knOnJek5+H7WpJmrVQAAAA==\r\n----- END CONNECTION\
+      \ DETAILS -----\n"
+  pollSCM:
+    pollingThreadCount: 10
+  serviceNowEndpoint:
+    timeout: 10
+  timestamperConfig:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
