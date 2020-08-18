@@ -6,6 +6,7 @@ jobs:
           cpsScm {
             scm {
               git {
+                branch('master')
                 remote {
                   url('https://github.com/darinpope/jenkinsfile-library.git')
                 }
@@ -26,6 +27,7 @@ jobs:
           cpsScm {
             scm {
               git {
+                branch('master')
                 remote {
                   url('https://github.com/darinpope/jenkinsfile-library.git')
                 }
