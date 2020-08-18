@@ -32,6 +32,8 @@ jobs:
                         name('refs/heads/master')
                       }
                     }
+                    browser {}
+                    doGenerateSubmoduleConfigurations(false)
                     gitTool('/usr/bin/git')
                     userRemoteConfigs {
                       userRemoteConfig {
