@@ -29,11 +29,13 @@ jobs:
                   gitSCM {
                     branches {
                       branchSpec {
-                        name('master')
+                        name('refs/heads/master')
                       }
                     }
-                    remote {
-                      url('https://github.com/darinpope/jenkinsfile-library.git')
+                    userRemoteConfigs {
+                      userRemoteConfig {
+                        url('https://github.com/darinpope/jenkinsfile-library.git')
+                      }
                     }
                     extensions {
                       wipeWorkspace()
