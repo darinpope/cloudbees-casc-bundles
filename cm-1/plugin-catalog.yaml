@@ -8,9 +8,10 @@ configurations:
     analysis-model-api: {version: 8.2.1}
     audit-trail: {version: '3.6'}
     bootstrap4-api: {version: 4.5.0-2}
+    checks-api: {version: 0.2.3}
     cloudbees-request-filter: {version: '1.5'}
     data-tables-api: {version: 1.10.21-2}
-    echarts-api: {version: 4.8.0-1}
+    echarts-api: {version: 4.8.0-2}
     font-awesome-api: {version: 5.13.0-1}
     forensics-api: {version: 0.7.0}
     job-dsl: {version: '1.77'}
@@ -18,4 +19,4 @@ configurations:
     jquery3-api: {version: 3.5.1-1}
     plugin-util-api: {version: 1.2.2}
     popper-api: {version: 1.16.0-6}
-    warnings-ng: {version: 8.2.0}
+    warnings-ng: {version: 8.4.1}

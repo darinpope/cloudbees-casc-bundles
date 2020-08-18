@@ -11,6 +11,7 @@ plugins:
   - {id: bootstrap4-api}
   - {id: bouncycastle-api}
   - {id: branch-api}
+  - {id: checks-api}
   - {id: cloudbees-administrative-monitors}
   - {id: cloudbees-analytics}
   - {id: cloudbees-assurance}
@@ -101,7 +102,7 @@ plugins:
   - {id: ssh-credentials}
   - {id: structs}
   - {id: support-core}
-  - {id: timestamper}  
+  - {id: timestamper}
   - {id: token-macro}
   - {id: trilead-api}
   - {id: user-activity-monitoring}
