@@ -32,6 +32,7 @@ jobs:
                         name('refs/heads/master')
                       }
                     }
+                    gitTool('/usr/bin/git')
                     userRemoteConfigs {
                       userRemoteConfig {
                         name('jfl-123')
