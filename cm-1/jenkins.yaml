@@ -1,5 +1,16 @@
 jobs:
   - script: >
+      multibranchPipelineJob('casc-mb-micro1') {
+        displayName('CasC Multibranch for micro1')
+        branchSources {
+          git {
+            id('d62c92fe-6cd9-4072-bcdd-30f8c4cc9a10')
+            remote('https://github.com/darinpope/micro1.git')
+            includes('*')
+          }
+        }
+      }
+  - script: >
       folder('folder1') {
         displayName('Folder 1')
         description('Folder for project A')
