@@ -27,7 +27,11 @@ jobs:
               cpsScmFlowDefinition {
                 scm {
                   gitSCM {
-                    branch('master')
+                    branches {
+                      branchSpec {
+                        name('master')
+                      }
+                    }
                     remote {
                       url('https://github.com/darinpope/jenkinsfile-library.git')
                     }
