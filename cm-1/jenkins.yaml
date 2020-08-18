@@ -34,6 +34,8 @@ jobs:
                     }
                     userRemoteConfigs {
                       userRemoteConfig {
+                        name('jfl-123')
+                        refspec('+refs/heads/master:refs/remotes/origin/master')
                         url('https://github.com/darinpope/jenkinsfile-library.git')
                       }
                     }
