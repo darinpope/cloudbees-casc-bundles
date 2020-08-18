@@ -1,10 +1,18 @@
 jobs:
   - script: >
       pipelineJob('casc-pipeline-basic') {
+        displayName('CasC Pipeline Basic')
         definition {
           cpsScm {
             scm {
-                git('https://github.com/darinpope/jenkinsfile-library.git')
+              git {
+                remote {
+                  url('https://github.com/darinpope/jenkinsfile-library.git')
+                }
+                extensions {
+                  wipeWorkspace()
+                }
+              }
             }
             lightweight(true)
             scriptPath('Jenkinsfile-basic')
@@ -13,10 +21,18 @@ jobs:
       }      
   - script: >
       pipelineJob('casc-pipeline-basic-shared-library') {
+        displayName('CasC Pipeline Basic with Shared Library')
         definition {
           cpsScm {
             scm {
-                git('https://github.com/darinpope/jenkinsfile-library.git')
+              git {
+                remote {
+                  url('https://github.com/darinpope/jenkinsfile-library.git')
+                }
+                extensions {
+                  wipeWorkspace()
+                }
+              }
             }
             lightweight(true)
             scriptPath('Jenkinsfile-basic-shared-library')
