@@ -2,10 +2,16 @@ jobs:
   - script: >
       pipelineJob('casc-ptc-pipeline-basic') {
         displayName('CasC Pipeline Basic from Pipeline Template Catalog')
+        disabled(false)
         definition {
           fromTemplateFlowDefinition {
             catalogName('darinpope-catalog')
             templateDirectory('basic')
+          }
+        }
+        configure { preojct ->
+          project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' {
+            'model'('darinpope-catalog/basic')
           }
         }
       }      
