@@ -15,7 +15,6 @@ jobs:
               'instance' {
                 'model'('darinpope-catalog/basic')
                 'values'(class: 'tree-map')
-                }
               }    
             }
           } 
