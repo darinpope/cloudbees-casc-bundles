@@ -3,7 +3,7 @@ jobs:
       pipelineJob('casc-ptc-pipeline-basic') {
         displayName('CasC Pipeline Basic from Pipeline Template Catalog')
         definition {
-          fromTemplateFlowDefinition {
+          FromTemplateFlowDefinition {
             catalogName('darinpope-catalog')
             templateDirectory('basic')
           }
