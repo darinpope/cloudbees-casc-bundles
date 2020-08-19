@@ -17,18 +17,6 @@ jobs:
               }
             }
           }
-#          project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' / 'values' << 'entry' {
-#            'string'('name')
-#            'string'('casc-ptc-pipeline-basic')
-#          }
-#          project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' / 'values' << 'entry' {
-#            'string'('previewEnvHostname')
-#            'string'('staging')
-#          }
-#          project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' / 'values' << 'entry' {
-#            'string'('emailRecipient')
-#            'string'('foo@foo.com')
-#          }
         }
       }      
   - script: >
