@@ -10,7 +10,7 @@ jobs:
           }
         }
         configure { project ->
-          project / 'properties' {
+          project / properties {
             'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl'(plugin: 'cloudbees-workflow-template@3.7')
           }
         }
