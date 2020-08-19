@@ -11,11 +11,11 @@ jobs:
         }
         configure { project ->
           project / 'properties' {
-            'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl'(plugin: 'cloudbees-workflow-template@3.7') {
-              'instance' {
-                'model'('darinpope-catalog/basic')
-              }
-            }
+            'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl'(plugin: 'cloudbees-workflow-template@3.7')
+          }
+          project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' {
+            'model'('darinpope-catalog/basic')
+            'values'(class: 'tree-map')
           }
         }
       }      
