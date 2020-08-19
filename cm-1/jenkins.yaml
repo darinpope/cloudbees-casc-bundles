@@ -1,5 +1,15 @@
 jobs:
   - script: >
+      pipelineJob('casc-ptc-pipeline-basic') {
+        displayName('CasC Pipeline Basic from Pipeline Template Catalog')
+        definition {
+          fromTemplateFlowDefinition {
+            catalogName('darinpope catalog')
+            templateDirectory('basic')
+          }
+        }
+      }      
+  - script: >
       multibranchPipelineJob('casc-mb-micro1') {
         displayName('CasC Multibranch for micro1')
         branchSources {
