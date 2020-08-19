@@ -9,7 +9,7 @@ jobs:
             templateDirectory('basic')
           }
         }
-        configure { preojct ->
+        configure { project ->
           project / 'properties' / 'com.cloudbees.pipeline.governance.templates.classic.standalone.GovernancePipelineJobPropertyImpl' / 'instance' {
             'model'('darinpope-catalog/basic')
           }
