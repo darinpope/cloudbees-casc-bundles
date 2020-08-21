@@ -1,0 +1,172 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "vagrant"
+          id: "vagrant"
+          password: "{AQAAABAAAAAQgLCl3vNjLHMlmGfbhAOWQEzXfruirRBshyJ3L0vFNd8=}"
+          scope: GLOBAL
+          username: "vagrant"
+jenkins:
+  agentProtocols:
+  - "Diagnostic-Ping"
+  - "JNLP4-connect"
+  - "OperationsCenter2"
+  - "Ping"
+  authorizationStrategy:
+    loggedInUsersCanDoAnything:
+      allowAnonymousRead: false
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  labelAtoms:
+  - name: "linux"
+  - name: "master"
+  - name: "team1-agent"
+  - name: "team2-agent"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      labelString: "linux"
+      launcher:
+        nioSsh:
+          connectionDetails:
+            credentialsId: "vagrant"
+            displayEnvironment: false
+            keyVerificationStrategy: "blindlyTrust"
+            port: 22
+          host: "cm2"
+      mode: EXCLUSIVE
+      name: "team1-agent"
+      nodeProperties:
+      - securityTokens:
+          acceptTasksWithoutOwningItem: false
+      remoteFS: "/home/vagrant/team1-agent"
+      retentionStrategy: "always"
+  - permanent:
+      labelString: "linux"
+      launcher:
+        nioSsh:
+          connectionDetails:
+            credentialsId: "vagrant"
+            displayEnvironment: false
+            keyVerificationStrategy: "blindlyTrust"
+            port: 22
+          host: "cm2"
+      mode: EXCLUSIVE
+      name: "team2-agent"
+      nodeProperties:
+      - securityTokens:
+          acceptTasksWithoutOwningItem: false
+      remoteFS: "/home/vagrant/team2-agent"
+      retentionStrategy: "always"
+  numExecutors: 0
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm: "operationsCenter"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "core-cm-offline"
+      url: "file:/var/cache/cloudbees-core-cm/war/WEB-INF/plugins/update-center.json"
+    - id: "cap-core-cm"
+      url: "https://jenkins-updates.cloudbees.com/update-center/envelope-core-cm/update-center.json"
+  views:
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+beekeeper:
+  enabled: true
+  securityWarnings:
+    enabledForCore: true
+    enabledForPlugins: true
+  upgrades:
+    autoDowngradePlugins: false
+    autoUpgradePlugins: false
+security:
+  anonymizeSupportBundle:
+    enabled: false
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  artifactManager:
+    artifactManagerFactories:
+    - "jSync"
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+    - "averageChildHealthMetric"
+    - jobStatusHealthMetric:
+        countVirginJobs: false
+        failure: true
+        success: true
+        unbuilt: true
+        unstable: true
+    - "projectEnabledHealthMetric"
+  experimentalPlugins:
+    enabled: false
+  extendedEmailPublisher:
+    adminRequiredForTemplateTesting: false
+    allowUnregisteredEnabled: false
+    charset: "UTF-8"
+    debugMode: false
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: 0
+    precedenceBulk: false
+    useSsl: false
+    watchingEnabled: false
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "http://cm1:8080/github-webhook/"
+  gitSCM:
+    createAccountBasedOnEmail: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  hAGlobalConfiguration:
+    bindPort: 0
+    diagnosticPort: 0
+    portRange: 0
+  location:
+    adminAddress: "address not configured yet <nobody@nowhere>"
+    url: "http://cm1:8080/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  operationsCenterRootAction:
+    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAA2KSQqAMAwA/5KzodomdvmNplYFN6SexL+bOQwMzAvzPRwVEgg7Jus9UpgykvQO\r\
+      \nQ2SVRHJsSxk9QwNr1rdF2TuN5960llqvZMwpKSgGvh8LA9LaVQAAAA==\r\n----- END CONNECTION\
+      \ DETAILS -----\n"
+  pollSCM:
+    pollingThreadCount: 10
+  usageStatisticsCloudBees:
+    usageStatisticsCollected: true
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
