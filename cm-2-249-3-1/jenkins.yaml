@@ -71,6 +71,20 @@ cloudbees-pipeline-policies:
       name: "paused-action-in-agent"
       rules:
       - "pausedActionInAgentRule"
+advisor:
+  acceptToS: true
+  email: "dpope@cloudbees.com"
+  excludedComponents:
+  - "GCLogs"
+  - "Agents"
+  - "AgentsConfigFile"
+  - "ConfigFileComponent"
+  - "RootCAs"
+  - "SlaveLogs"
+  - "OtherConfigFilesComponent"
+  - "HeapUsageHistogram"
+  - "OtherLogs"
+  nagDisabled: false
 beekeeper:
   enabled: true
   securityWarnings:
