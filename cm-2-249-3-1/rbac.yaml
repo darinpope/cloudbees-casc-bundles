@@ -1,0 +1,2 @@
+removeStrategy:
+  rbac: SYNC

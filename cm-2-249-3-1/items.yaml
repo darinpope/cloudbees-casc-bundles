@@ -1,0 +1,10 @@
+removeStrategy:
+  rbac: SYNC
+  items: NONE
+items:
+- kind: folder
+  name: team1
+  description: ''
+- kind: folder
+  name: team2
+  description: ''
