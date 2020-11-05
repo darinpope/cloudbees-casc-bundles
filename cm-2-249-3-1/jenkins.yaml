@@ -151,9 +151,11 @@ unclassified:
     useSsl: false
     useTls: false
   operationsCenterRootAction:
-    connectionDetails: "----- BEGIN CONNECTION DETAILS -----\nH4sIAAAAAAAAAA3KSQrAIAxA0btk3WA1xhpv40AH6ITYVend6989+C8sNZ4NAojMLEyM4kpCK6Zg\r\
-      \n1JlQG5psskzOEwywlf6OmA/d8dS9a23tDkpdOfiegu8HLMENGFUAAAA=\r\n----- END CONNECTION\
-      \ DETAILS -----\n"
+    connectionDetails: |-
+      ----- BEGIN CONNECTION DETAILS -----
+      H4sIAAAAAAAAAA3KSw6AIAwA0bt0bQNKA5TbFDBq4i8EV8a729m9ZF5YmpwdEnAORBQCsmSHRJMg
+      R+fRFutrdTNNLDDAVvW1WI5R8bRdtfZ+J2OukqJm4PsBifkdQlUAAAA=
+      ----- END CONNECTION DETAILS -----        
   pollSCM:
     pollingThreadCount: 10
   usageStatisticsCloudBees:
